@@ -1,0 +1,5 @@
+/sample-api/node_modules
+/sample-app/node_modules
+/sample-app/dist
+sample-app/package-lock.json
+sample-api/package-lock.json
