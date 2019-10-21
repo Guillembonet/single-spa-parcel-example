@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --port 8082",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "single-spa-vue": "^1.5.2",
+    "systemjs-webpack-interop": "^1.1.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -18,6 +20,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "vue-cli-plugin-single-spa": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
