@@ -4,7 +4,7 @@ services:
     build: ../sample-single-spa
     image: single-spa
     ports:
-      - "5001:5000"
+      - "5001:80"
   sample-app:
     build: ../sample-app
     image: sample-app

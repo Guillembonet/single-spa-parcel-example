@@ -1,9 +1,5 @@
-# build stage
-FROM node:10
-WORKDIR /single-spa
-COPY package*.json ./
-RUN npm install
-COPY . .
-
 # production stage
-CMD ["npm", "run", "serve"]
+FROM nginx:stable-alpine as production-stage
+COPY index.html /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

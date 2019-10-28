@@ -4,5 +4,5 @@ module.exports = {
         config.devServer.set('inline', false)
         config.devServer.set('hot', false)
     },
-    filenameHashing: false,
+    filenameHashing: false
 }
