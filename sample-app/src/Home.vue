@@ -6,6 +6,9 @@
     <router-link to="/about">
         About
     </router-link>
+    <router-link to="/app2">
+        App 2
+    </router-link>
 </div>
 </template>
 <script lang="ts">

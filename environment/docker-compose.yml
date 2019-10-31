@@ -10,6 +10,11 @@ services:
     image: sample-app
     ports:
       - "5000:8082"
+  sample-app2:
+    build: ../sample-app2
+    image: sample-app2
+    ports:
+      - "5002:9001"
   sample-api:
     build: ../sample-api
     image: sample-api
@@ -18,7 +23,7 @@ services:
       - DB_name=test
       - NODE_ENV=production
     ports: 
-      - "8080:3000"
+      - "8080:3005"
   mongo:
     image: mongo
     ports:
