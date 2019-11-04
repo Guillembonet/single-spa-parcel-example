@@ -9,9 +9,13 @@
     <router-link to="/app2">
         App 2
     </router-link>
+    <div id="test"></div>
 </div>
 </template>
+
 <script lang="ts">
+import {mountRootParcel} from 'single-spa';
+import {parcelConfig} from './parcel.js'
 export default {
     name: 'home',
     data: function () {
@@ -21,6 +25,7 @@ export default {
   },
   mounted() {
     this.getTest()
+    mountRootParcel(parcelConfig, {domElement: document.getElementById("test")})
   },
   methods: {
     getTest() {

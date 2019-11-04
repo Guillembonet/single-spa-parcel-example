@@ -2,7 +2,6 @@ import Vue from 'vue';
 import App from './App.vue';
 import singleSpaVue from 'single-spa-vue';
 import Router from "vue-router";
-import './set-public-path'
 import About from './About.vue';
 import Home from './Home.vue';
 
