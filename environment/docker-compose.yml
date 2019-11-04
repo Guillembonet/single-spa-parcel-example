@@ -9,12 +9,12 @@ services:
     build: ../sample-app
     image: sample-app
     ports:
-      - "5000:8082"
+      - "5000:81"
   sample-app2:
     build: ../sample-app2
     image: sample-app2
     ports:
-      - "5002:9001"
+      - "5002:82"
   sample-api:
     build: ../sample-api
     image: sample-api

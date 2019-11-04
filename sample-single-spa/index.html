@@ -9,7 +9,7 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "sample-app": "http://localhost:5000/app.js",
+          "sample-app": "http://localhost:5000/js/app.js",
           "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js",
           "sample-app2": "http://localhost:5002/singleSpaEntry.js"
         }
@@ -30,12 +30,12 @@
         singleSpa.registerApplication(
           'sample-app',
           () => System.import('sample-app'),
-          location => location.pathname.startsWith('/') || location.pathname.startsWith('/about')
+          location => location.pathname.startsWith('/') || location.hash.startsWith('#/about')
         );
         singleSpa.registerApplication(
           'sample-app2',
           () => System.import('sample-app2'),
-          location => location.pathname.startsWith('/app2')
+          location => location.hash.startsWith('#/app2')
         );
         singleSpa.start();
       })
