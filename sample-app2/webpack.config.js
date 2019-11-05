@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        singleSpaEntry: './src/singleSpaEntry.js'
+        index: './src/index.js'
     },
 
     output: {
@@ -37,7 +37,6 @@ module.exports = {
     // devtool: 'none',
 
     devServer: {
-        host: '0.0.0.0',
         historyApiFallback: true,
         watchOptions: { aggregateTimeout: 300, poll: 1000 },
         headers: {

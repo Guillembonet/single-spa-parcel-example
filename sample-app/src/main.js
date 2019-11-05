@@ -7,7 +7,7 @@ import Home from './Home.vue';
 
 Vue.config.productionTip = false;
 
-const router = new Router({
+export const router = new Router({
   routes: [
       {
           path: "/",
@@ -31,6 +31,12 @@ const vueLifecycles = singleSpaVue({
     router
   },
 });
+
+/*new Vue({
+  el: '#app',
+  render: (h) => h(App),
+  router
+}).$mount("#app");*/
 
 export const bootstrap = vueLifecycles.bootstrap;
 export const mount = vueLifecycles.mount;

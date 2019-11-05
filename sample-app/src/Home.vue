@@ -1,5 +1,5 @@
 <template>
-<div>
+<div style="border-style: solid; border-width: 2px;">
     <p>{{ test }}</p>
     <button @click="postAndRefresh()">Post Data</button>
     <button @click="deleteAndRefresh()">Delete Data</button>
