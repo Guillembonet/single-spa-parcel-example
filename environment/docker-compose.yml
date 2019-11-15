@@ -1,0 +1,35 @@
+version: '3'
+services:
+  single-spa:
+    build: ../sample-single-spa
+    image: single-spa
+    ports:
+      - "5001:80"
+  sample-app:
+    build: ../sample-app
+    image: sample-app
+    ports:
+      - "5000:81"
+  sample-app2:
+    build: ../sample-app2
+    image: sample-app2
+    ports:
+      - "5002:82"
+  sample-api:
+    build: ../sample-api
+    image: sample-api
+    environment:
+      - DB=mongodb://mongo:27017
+      - DB_name=test
+      - NODE_ENV=production
+    ports: 
+      - "8080:3005"
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"
+  sample-parcel:
+    build: ../sample-parcel
+    image: sample-parcel
+    ports:
+      - "5003:83"

@@ -1,0 +1,12 @@
+{
+  "name": "sample-single-spa",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^11.1.0"
+  }
+}

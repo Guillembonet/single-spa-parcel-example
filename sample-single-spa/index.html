@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coexisting Vue Microfrontends</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="importmap-type" content="systemjs-importmap">
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "sample-app": "http://localhost:5000/js/app.js",
+          "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js",
+          "sample-app2": "http://localhost:5002/index.js",
+          "sample-parcel": "http://localhost:5002/index.js"
+        }
+      }
+    </script>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js" as="script" crossorigin="anonymous" />
+    <script src="https://unpkg.com/import-map-overrides@1.7.2/dist/import-map-overrides.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/system.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/amd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/named-exports.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/named-register.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/use-default.min.js"></script>
+  </head>
+  <body>
+    <script>
+      System.import('single-spa').then(function (singleSpa) {
+        singleSpa.registerApplication(
+          'sample-app',
+          () => System.import('sample-app'),
+          location => location.pathname.startsWith('/') || location.hash.startsWith('#/about')
+        );
+        singleSpa.registerApplication(
+          'sample-app2',
+          () => System.import('sample-app2'),
+          location => location.hash.startsWith('#/app2')
+        );
+        singleSpa.start();
+      })
+    </script>
+    <!-- See https://github.com/joeldenning/import-map-overrides#user-interface  -->
+    <import-map-overrides-full show-when-local-storage="overrides-ui"></import-map-overrides-full>
+  </body>
+</html>
