@@ -5,14 +5,14 @@ services:
     image: single-spa
     ports:
       - "5001:80"
-  sample-app:
-    build: ../sample-app
-    image: sample-app
+  sample-vue:
+    build: ../sample-vue
+    image: sample-vue
     ports:
       - "5000:81"
-  sample-app2:
-    build: ../sample-app2
-    image: sample-app2
+  sample-react:
+    build: ../sample-react
+    image: sample-react
     ports:
       - "5002:82"
   sample-api:
@@ -24,6 +24,15 @@ services:
       - NODE_ENV=production
     ports: 
       - "8080:3005"
+  sample-api2:
+    build: ../sample-api2
+    image: sample-api2
+    environment:
+      - DB=mongodb://mongo:27017
+      - DB_name=test2
+      - NODE_ENV=production
+    ports: 
+      - "8081:3006"
   mongo:
     image: mongo
     ports:

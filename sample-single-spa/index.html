@@ -9,10 +9,9 @@
     <script type="systemjs-importmap">
       {
         "imports": {
-          "sample-app": "http://localhost:5000/js/app.js",
+          "sample-vue": "http://localhost:5000/js/app.js",
           "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js",
-          "sample-app2": "http://localhost:5002/index.js",
-          "sample-parcel": "http://localhost:5002/index.js"
+          "sample-react": "http://localhost:5002/index.js"
         }
       }
     </script>
@@ -29,14 +28,14 @@
     <script>
       System.import('single-spa').then(function (singleSpa) {
         singleSpa.registerApplication(
-          'sample-app',
-          () => System.import('sample-app'),
+          'sample-vue',
+          () => System.import('sample-vue'),
           location => location.pathname.startsWith('/') || location.hash.startsWith('#/about')
         );
         singleSpa.registerApplication(
-          'sample-app2',
-          () => System.import('sample-app2'),
-          location => location.hash.startsWith('#/app2')
+          'sample-react',
+          () => System.import('sample-react'),
+          location => location.hash.startsWith('#/react') || location.hash.startsWith('#/react_about')
         );
         singleSpa.start();
       })
