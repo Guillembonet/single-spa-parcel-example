@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3005;
+var port = process.env.PORT || 3006;
 var cors = require('cors');
 var MongoClient = require('mongodb').MongoClient;
 
@@ -19,7 +19,7 @@ app.get('/test', function (req, res, next) {
         
         try {
             var data = []
-            db.db(process.env.DB_name).collection('test').find().toArray(function(err, docs) {
+            db.db(process.env.DB_name).collection('test2').find().toArray(function(err, docs) {
                 docs.forEach(function(doc) {
                     data.push(doc.test);
                 })
@@ -40,7 +40,7 @@ app.post('/test', function(req, res, next) {
         if(err) throw err;
 
         try {
-            db.db(process.env.DB_name).collection("test").insertOne({ test: "test" },
+            db.db(process.env.DB_name).collection("test2").insertOne({ test: "test" },
                 res.json('test'));
         } catch(e) {
             console.log("INSERT ERROR");
@@ -55,7 +55,7 @@ app.delete('/test', function(req, res, next) {
         if(err) throw err;
 
         try {
-            db.db(process.env.DB_name).collection("test").findOneAndDelete({ test: "test" },
+            db.db(process.env.DB_name).collection("test2").findOneAndDelete({ test: "test" },
                 res.json('test'));
         } catch(e) {
             console.log("DELETE ERROR");
