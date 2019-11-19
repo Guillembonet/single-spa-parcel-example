@@ -17,12 +17,17 @@ const singleSpa = singleSpaVue({
   }
 });
 
-export const bootstrap = [
-  singleSpa.bootstrap
-];
-export const mount = [
-  singleSpa.mount
-];
-export const unmount = [
-  singleSpa.unmount
-];
+/*const vueParcel = {
+  name: "vue-parcel",
+  bootstrap: singleSpa.bootstrap(),
+  mount: singleSpa.mount(),
+  unmount: singleSpa.unmount()
+}*/
+
+export const name = "vue-parcel";
+
+export const bootstrap = singleSpa.bootstrap;
+
+export const mount = singleSpa.mount;
+
+export const unmount = singleSpa.unmount;

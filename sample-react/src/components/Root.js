@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Home from './Home.js';
 import About from './About.js';
+import ParcelPage from './ParcelPage.js';
 
 export default function Root() {
   return (
@@ -19,6 +20,9 @@ export default function Root() {
           </Route>
           <Route path="/react">
             <Home />
+          </Route>
+          <Route path="/react_parcel_page">
+            <ParcelPage />
           </Route>
         </Switch>
       </div>

@@ -1,26 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import singleSpaReact from 'single-spa-react';
+import 'webpack-external-import/polyfill';
 import Root from './components/Root.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/styles/style.css';
 
 //ReactDOM.render(<Home />, document.getElementById("app"));
 
-const singleSpa = singleSpaReact({
+const singleSpaReactLifecycle = singleSpaReact({
   React,
   ReactDOM,
   rootComponent: Root,
 });
 
 export const bootstrap = [
-    singleSpa.bootstrap
+    singleSpaReactLifecycle.bootstrap
 ];
 
 export const mount = [
-    singleSpa.mount
+    singleSpaReactLifecycle.mount
 ];
 
 export const unmount = [
-    singleSpa.unmount
+    singleSpaReactLifecycle.unmount
 ];

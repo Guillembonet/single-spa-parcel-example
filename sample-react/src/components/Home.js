@@ -48,6 +48,10 @@ class Home extends React.Component {
     this.props.history.push('/');
   }
 
+  goToParcelPage() {
+    this.props.history.push('/react_parcel_page');
+  }
+
   render() {
     return (
       <div className="react-app py-3">
@@ -80,9 +84,16 @@ class Home extends React.Component {
           </Button>
           <Button 
             variant="secondary"
+            className="mr-2"
             onClick={() => this.goToAbout()}
           >
             About
+          </Button>
+          <Button 
+            variant="secondary"
+            onClick={() => this.goToParcelPage()}
+          >
+            Parcel Page
           </Button>
         </div>
       </div>
