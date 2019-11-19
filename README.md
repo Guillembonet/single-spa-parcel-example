@@ -1,7 +1,7 @@
 # single-spa-parcel-example
 
 ## To run this example in development mode use: 
-1. Have a running Mongo DB in the port **27017**
+1. Have a Mongo DB running in port **27017**
 2. Inside each folder (sample-api, sample-api2, sample-vue, sample-react, sample-single-spa) run:
 ```
 npm install
