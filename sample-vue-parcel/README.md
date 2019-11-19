@@ -1,4 +1,4 @@
-# sample-app
+# sample-vue
 
 ## Project setup
 ```
