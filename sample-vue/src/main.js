@@ -37,12 +37,6 @@ const singleSpa = singleSpaVue({
   }
 });
 
-new Vue({
-  el: '#app',
-  render: (h) => h(App),
-  router
-}).$mount("#app");
-
 export const bootstrap = [
   singleSpa.bootstrap
 ];

@@ -6,10 +6,13 @@ export default {
     http_delete
 }
 
+const API_URL = process.env.API_URL;
+const API_ENDPOINT = process.env.API_ENDPOINT;
+
 async function http_get() {
     let result = []
     await axios
-        .get(process.env.REACT_APP_API_URL + process.env.REACT_APP_API_ENDPOINT)
+        .get(API_URL + API_ENDPOINT)
         .then(response => {
             result = response.data
         })
@@ -19,7 +22,7 @@ async function http_get() {
 async function http_post() {
     let result = {}
     await axios
-        .post(process.env.REACT_APP_API_URL + process.env.REACT_APP_API_ENDPOINT)
+        .post(API_URL + API_ENDPOINT)
         .then(response => {
             result = response
         })
@@ -29,7 +32,7 @@ async function http_post() {
 async function http_delete() {
     let result = {}
     await axios
-        .delete(process.env.REACT_APP_API_URL + process.env.REACT_APP_API_ENDPOINT)
+        .delete(API_URL + API_ENDPOINT)
         .then(response => {
             result = response
         })

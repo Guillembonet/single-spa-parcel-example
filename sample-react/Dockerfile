@@ -5,8 +5,8 @@ ENV PATH /react/node_modules/.bin:$PATH
 COPY package.json /react/package.json
 RUN npm install --silent
 COPY . /react
-ENV REACT_APP_API_URL http://localhost:8081
-ENV REACT_APP_API_ENDPOINT /test
+ENV API_URL http://localhost:8081
+ENV API_ENDPOINT /test
 RUN npm run build
 
 # production environment

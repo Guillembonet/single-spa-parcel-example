@@ -10,8 +10,8 @@ class About extends React.Component {
 
     render() {
         return (
-            <div class="react-app py-3">
-                <h1 class="h1-react">Hola, I'm a React About page</h1>
+            <div className="react-app py-3">
+                <h1 className="h1-react">Hola, I'm a React About page</h1>
                 <Button 
                     variant="secondary"
                     className="mt-2"
