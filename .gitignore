@@ -1,8 +1,0 @@
-/sample-api/node_modules
-/sample-app/node_modules
-/sample-single-spa/node_modules
-/sample-single-spa/dist
-/sample-app/dist
-sample-app/package-lock.json
-sample-api/package-lock.json
-sample-single-spa/package-lock.json
