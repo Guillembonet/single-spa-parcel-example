@@ -13,11 +13,19 @@
           "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.4.1/system/single-spa.min.js",
           "sample-react": "http://localhost:5002/index.js",
           "sample-vue-parcel": "http://localhost:5003/js/app.js",
-          "sample-react-parcel": "http://localhost:5004/index.js"
+          "sample-react-parcel": "http://localhost:5004/index.js",
+          "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
+          "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.3/dist/vue-router.min.js",
+          "react": "https://unpkg.com/react@16.12.0/umd/react.production.min.js",
+          "react-dom": "https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js"
         }
       }
     </script>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.4.1/system/single-spa.min.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/vue-router@3.1.3/dist/vue-router.min.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="https://unpkg.com/react@16.12.0/umd/react.production.min.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js" as="script" crossorigin="anonymous" />
     <script src="https://unpkg.com/import-map-overrides@1.7.2/dist/import-map-overrides.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/system.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/amd.min.js"></script>
@@ -27,7 +35,9 @@
   </head>
   <body>
     <script>
-      System.import('single-spa').then(function (singleSpa) {
+      Promise.all([System.import('single-spa'), System.import('vue'), System.import('vue-router'), System.import('react'), System.import('react-dom')]).then(function (modules) {
+        var singleSpa = modules[0];
+
         singleSpa.registerApplication(
           'sample-vue',
           () => System.import('sample-vue'),
