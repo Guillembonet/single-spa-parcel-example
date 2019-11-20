@@ -1,5 +1,5 @@
 <template>
-  <div class="py-3">
+  <div class="p-3 vue-app">
     <h1 class="h1-vue">This is a Vue parcel</h1>
     <p class="p-vue">{{dbList}}</p>
     <div>
@@ -44,3 +44,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .vue-app {
+    border-style: solid;
+    border-width: 3px;
+    border-color: green;
+    display: inline-block;
+  }
+</style>
