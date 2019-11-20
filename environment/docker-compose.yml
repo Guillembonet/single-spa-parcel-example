@@ -15,6 +15,11 @@ services:
     image: sample-react
     ports:
       - "5002:82"
+  sample-vue-parcel:
+    build: ../sample-vue-parcel
+    image: sample-vue-parcel
+    ports:
+      - "5003:83"
   sample-api:
     build: ../sample-api
     image: sample-api

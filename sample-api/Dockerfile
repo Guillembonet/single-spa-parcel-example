@@ -1,4 +1,5 @@
-FROM node:10
+#FROM node:10
+FROM node:12.2.0-alpine
 
 # Create app directory
 WORKDIR /backend

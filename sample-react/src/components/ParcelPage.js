@@ -12,16 +12,17 @@ class ParcelPage extends React.Component {
     render() {
         return (
             <div className="react-app py-3">
+                <h1 className="h1-react mb-3">Hola, I'm a React Page</h1>
                 <Parcel
-                    config={() => System.import('http://localhost:8081/js/app.js')}
+                    config={() => System.import('sample-vue-parcel')}
                     wrapWith="div"
                 />
-                <div className="mt-2">
+                <div className="mt-3">
                     <Button 
                         variant="secondary"
                         className="mr-2"
                         onClick={() => {
-                            System.import('http://localhost:8081/js/app.js').then(result => {
+                            System.import('sample-vue-parcel').then(result => {
                                 console.log(result)
                             })
                         }}

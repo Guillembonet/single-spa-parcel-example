@@ -33,7 +33,7 @@ module.exports = () => {
                     test: /\.css$/,
                     loader: "style-loader!css-loader"
                 },
-                {parser: {system: false}}
+                { parser: { system: false } }
             ]
         },
         plugins: [

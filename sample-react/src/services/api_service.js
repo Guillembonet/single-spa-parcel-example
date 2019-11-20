@@ -6,8 +6,8 @@ export default {
     http_delete
 }
 
-const API_URL = process.env.API_URL;
-const API_ENDPOINT = process.env.API_ENDPOINT;
+const API_URL = process.env.REACT_APP_API_URL;
+const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 
 async function http_get() {
     let result = []
