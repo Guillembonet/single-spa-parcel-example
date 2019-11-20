@@ -8,7 +8,8 @@
     </div>
     <div class="mt-2">
       <b-button to="/about" class="mr-2">About</b-button>
-      <b-button to="/react">React</b-button>
+      <b-button to="/react" class="mr-2">React</b-button>
+      <b-button to="/parcel_page">Parcel Page</b-button>
     </div>
   </div>
 </template>
