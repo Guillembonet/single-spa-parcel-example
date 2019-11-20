@@ -5,7 +5,7 @@ ENV PATH /vue-parcel/node_modules/.bin:$PATH
 COPY package.json /vue-parcel/package.json
 RUN npm install --silent
 COPY . /vue-parcel
-ENV VUE_APP_API_URL http://localhost:8081
+ENV VUE_APP_API_URL http://localhost:8080
 ENV VUE_APP_API_ENDPOINT /test
 RUN npm run build
 
