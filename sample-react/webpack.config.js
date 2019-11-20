@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
-const URLImportPlugin = require('webpack-external-import/webpack')
 
 module.exports = () => {
     // call dotenv and it will return an Object with a parsed key 
@@ -37,10 +36,7 @@ module.exports = () => {
             ]
         },
         plugins: [
-            new webpack.DefinePlugin(envKeys),
-            /*new URLImportPlugin({
-                manifestName: 'sample-react'
-            })*/
+            new webpack.DefinePlugin(envKeys)
         ],
         devServer: {
             historyApiFallback: true,
