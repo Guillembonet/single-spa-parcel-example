@@ -1,5 +1,7 @@
 # single-spa-parcel-example
 
+This project is an example of web app built with multiple microfrontends running in different VM's using the [single-spa](https://github.com/CanopyTax/single-spa) framework.
+
 ## To run this example in development mode use: 
 1. Have a Mongo DB running in port **27017**
 2. Inside each folder (sample-api, sample-api2, sample-vue, sample-react, sample-single-spa) run:
