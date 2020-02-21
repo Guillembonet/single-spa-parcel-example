@@ -17,3 +17,4 @@ npm run serve
 docker-compose build
 docker-compose up
 ```
+You can access the portal at [http://localhost:5001](http://localhost:5001)
