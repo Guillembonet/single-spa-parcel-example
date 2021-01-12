@@ -8,10 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.3.2",
-    "single-spa-vue": "^1.5.4"
+    "single-spa-vue": "^1.5.4",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",
@@ -22,8 +24,8 @@
     "eslint-plugin-vue": "^5.0.0",
     "sass": "^1.23.6",
     "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.10",
-    "vue-cli-plugin-single-spa": "^1.0.1"
+    "vue-cli-plugin-single-spa": "^1.0.1",
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,
