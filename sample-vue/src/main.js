@@ -20,14 +20,14 @@ export var mountParcel;
 const router = new Router({
   routes: [
     {
-        path: "/",
-        name: "home",
-        component: Home
+      path: "/",
+      name: "home",
+      component: Home
     },
     {
-        path: "/about",
-        name: "about",
-        component: About
+      path: "/about",
+      name: "about",
+      component: About
     },
     {
       path: "/parcel_page",
